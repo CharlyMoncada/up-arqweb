@@ -7,7 +7,7 @@ Esta aplicacion nos permite tener una agenda personal de contactos, en la cual s
 
 Los endpoints que se utilizaran seran los siguientes:
 
-* api/agenda (methods=['GET']) --> Retorna agenda
+* api/contacts (methods=['GET']) --> Retorna agenda
 
 * api/contact (methods=['POST']) --> Crea contacto
 
@@ -16,4 +16,15 @@ Los endpoints que se utilizaran seran los siguientes:
 * api/contact/<int:id> (methods=['DELETE']) --> Borra contacto
 
 * api/contact (methods=['PUT']) --> Modifica contacto
+
+
+
+Json model to create a contact:
+{
+  "name": "Jose",
+  "age": 30,
+	"address": "CABA",
+	"birthCountry": "Argentina",
+	"notes": "Jose de Argentina en CABA"
+}
 
