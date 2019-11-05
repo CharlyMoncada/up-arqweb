@@ -17,7 +17,7 @@ Los endpoints que se utilizaran seran los siguientes:
 
 * api/contact/<int:id> (methods=['DELETE']) --> Borra contacto
 
-* api/contact (methods=['PUT']) --> Modifica contacto
+* api/contact (methods=['PATCH']) --> Modifica contacto
 
 
 
