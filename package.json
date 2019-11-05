@@ -1,0 +1,24 @@
+{
+  "name": "up-arqweb",
+  "version": "1.0.0",
+  "description": "Trabajo Practico",
+  "main": "controller.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlyMoncada/up-arqweb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlyMoncada/up-arqweb/issues"
+  },
+  "homepage": "https://github.com/CharlyMoncada/up-arqweb#readme"
+}
