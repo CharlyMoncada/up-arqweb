@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express()
 var db = require("./database.js")
-const port = 3000
+const port = 4000
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH,OPTIONS");
     next();
   });
 
@@ -123,6 +124,18 @@ app.delete("/contact/:id", (req, res, next) => {
         'DELETE FROM contact WHERE id = ?',
         req.params.id,
         function (err, result) {
+            if (err){
+                res.status(400).json({"error": res.message})
+                return;
+            }
+            res.status(200).json({"message":"deleted", changes: this.changes})
+    });
+})
+
+app.delete("/deleteAllContact", (req, res, next) => {
+    db.run(
+        'DELETE FROM contact',
+        function (err) {
             if (err){
                 res.status(400).json({"error": res.message})
                 return;
